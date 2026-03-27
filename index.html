@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumière Events — Singapore's Premier Event Studio</title>
+  <meta name="description" content="Corporate galas, intimate weddings, and brand experiences that people talk about for years. Singapore's premier event planning studio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- SVG noise filter for grain texture -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;">
+    <defs>
+      <filter id="grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+        <feColorMatrix type="saturate" values="0" />
+        <feBlend in="SourceGraphic" mode="multiply" result="blend" />
+        <feComposite in="blend" in2="SourceGraphic" operator="in" />
+      </filter>
+    </defs>
+  </svg>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">LUMIÈRE</a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#portfolio" class="nav__link">Work</a></li>
+        <li><a href="#process" class="nav__link">Process</a></li>
+        <li><a href="#testimonials" class="nav__link">Clients</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Get in Touch</a></li>
+      </ul>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-mesh" id="heroBgMesh"></div>
+    <div class="hero__noise"></div>
+
+    <div class="hero__content">
+      <div class="hero__pill">Singapore's Premier Event Studio</div>
+
+      <h1 class="hero__headline">
+        <span class="hero__line hero__line--1">We Design</span>
+        <span class="hero__line hero__line--2">Unforgettable.</span>
+      </h1>
+
+      <div class="hero__rule"></div>
+
+      <p class="hero__subtext">
+        Corporate galas, intimate weddings, and brand experiences<br />
+        that people talk about for years.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="#contact" class="btn btn--gold">Start Planning</a>
+        <a href="#portfolio" class="btn btn--ghost">Our Work</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll-indicator" id="scrollIndicator">
+      <span class="hero__scroll-label">Scroll</span>
+      <div class="hero__chevron">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M4 7L10 13L16 7" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2 — SERVICES
+  ============================================================ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-headline">Every Detail, Handled.</h2>
+
+      <div class="services__grid">
+
+        <div class="service-card animate-up">
+          <div class="service-card__icon">⬡</div>
+          <h3 class="service-card__name">Corporate Events</h3>
+          <p class="service-card__desc">Product launches, AGMs, team summits</p>
+        </div>
+
+        <div class="service-card animate-up">
+          <div class="service-card__icon">◇</div>
+          <h3 class="service-card__name">Weddings</h3>
+          <p class="service-card__desc">Bespoke ceremonies from 20 to 2,000 guests</p>
+        </div>
+
+        <div class="service-card animate-up">
+          <div class="service-card__icon">✦</div>
+          <h3 class="service-card__name">Gala Dinners</h3>
+          <p class="service-card__desc">Award nights and black-tie experiences</p>
+        </div>
+
+        <div class="service-card animate-up">
+          <div class="service-card__icon">◈</div>
+          <h3 class="service-card__name">Brand Activations</h3>
+          <p class="service-card__desc">Experiential marketing that converts</p>
+        </div>
+
+        <div class="service-card animate-up">
+          <div class="service-card__icon">❋</div>
+          <h3 class="service-card__name">Private Parties</h3>
+          <p class="service-card__desc">Milestone celebrations done right</p>
+        </div>
+
+        <div class="service-card animate-up">
+          <div class="service-card__icon">⬟</div>
+          <h3 class="service-card__name">Virtual &amp; Hybrid</h3>
+          <p class="service-card__desc">Seamless digital-first events</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3 — ABOUT / STUDIO STORY
+  ============================================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+
+        <div class="about__stats animate-up">
+          <div class="stat">
+            <span class="stat__number">350+</span>
+            <span class="stat__label">Events Delivered</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__number">12</span>
+            <span class="stat__label">Years in the Industry</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__number">98%</span>
+            <span class="stat__label">Client Return Rate</span>
+          </div>
+          <div class="about__gold-mark">✦</div>
+        </div>
+
+        <div class="about__story animate-up">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-headline">Built on Belief.</h2>
+          <p class="about__copy">
+            Lumière was built on one belief — that great events don't happen by accident. They are architected.
+          </p>
+          <p class="about__copy">
+            We obsess over every canapé, every lighting cue, every moment of arrival. From first brief to final bow, we are your creative partners.
+          </p>
+          <p class="about__copy">
+            Since 2013, we have delivered over 350 events across Singapore and the region — each one a precise expression of our client's vision, amplified by our craft.
+          </p>
+          <a href="#contact" class="btn btn--gold about__cta">Work With Us</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4 — PORTFOLIO
+  ============================================================ -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-headline">Moments We've Made</h2>
+
+      <div class="portfolio__bento">
+
+        <div class="portfolio-tile portfolio-tile--large portfolio-tile--teal animate-up">
+          <div class="portfolio-tile__overlay">
+            <span class="portfolio-tile__category">Corporate</span>
+            <h3 class="portfolio-tile__name">Samsung SEA Summit 2024</h3>
+            <a href="#contact" class="portfolio-tile__link">View Event →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-tile portfolio-tile--large portfolio-tile--champagne animate-up">
+          <div class="portfolio-tile__overlay">
+            <span class="portfolio-tile__category">Wedding</span>
+            <h3 class="portfolio-tile__name">The Raffles Collection</h3>
+            <a href="#contact" class="portfolio-tile__link">View Event →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-tile portfolio-tile--small portfolio-tile--burgundy animate-up">
+          <div class="portfolio-tile__overlay">
+            <span class="portfolio-tile__category">Gala</span>
+            <h3 class="portfolio-tile__name">MAS Anniversary Dinner</h3>
+            <a href="#contact" class="portfolio-tile__link">View Event →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-tile portfolio-tile--small portfolio-tile--navy animate-up">
+          <div class="portfolio-tile__overlay">
+            <span class="portfolio-tile__category">Activation</span>
+            <h3 class="portfolio-tile__name">Nike Air Max Launch</h3>
+            <a href="#contact" class="portfolio-tile__link">View Event →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-tile portfolio-tile--small portfolio-tile--forest animate-up">
+          <div class="portfolio-tile__overlay">
+            <span class="portfolio-tile__category">Private</span>
+            <h3 class="portfolio-tile__name">Garden Party, Sentosa Cove</h3>
+            <a href="#contact" class="portfolio-tile__link">View Event →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5 — PROCESS
+  ============================================================ -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-label">How We Work</div>
+      <h2 class="section-headline">From Vision to Reality</h2>
+
+      <div class="process__timeline">
+
+        <div class="process__step animate-up" style="--step-delay: 0ms;">
+          <div class="process__step-number">01</div>
+          <div class="process__step-content">
+            <h3 class="process__step-title">Brief &amp; Vision</h3>
+            <p class="process__step-desc">We listen before we design.</p>
+          </div>
+        </div>
+
+        <div class="process__connector"></div>
+
+        <div class="process__step animate-up" style="--step-delay: 150ms;">
+          <div class="process__step-number">02</div>
+          <div class="process__step-content">
+            <h3 class="process__step-title">Concept &amp; Proposal</h3>
+            <p class="process__step-desc">Mood boards, budgets, and bold ideas.</p>
+          </div>
+        </div>
+
+        <div class="process__connector"></div>
+
+        <div class="process__step animate-up" style="--step-delay: 300ms;">
+          <div class="process__step-number">03</div>
+          <div class="process__step-content">
+            <h3 class="process__step-title">Execution</h3>
+            <p class="process__step-desc">Vendors, logistics, and on-site command.</p>
+          </div>
+        </div>
+
+        <div class="process__connector"></div>
+
+        <div class="process__step animate-up" style="--step-delay: 450ms;">
+          <div class="process__step-number">04</div>
+          <div class="process__step-content">
+            <h3 class="process__step-title">The Event</h3>
+            <p class="process__step-desc">You enjoy it. We make sure of that.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6 — TESTIMONIALS
+  ============================================================ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-label">Kind Words</div>
+      <h2 class="section-headline">What Our Clients Say</h2>
+
+      <div class="testimonials__grid">
+
+        <div class="testimonial-card animate-up">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "Lumière turned our annual dinner into a moment our team still talks about. Flawless from start to finish."
+          </blockquote>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__name">Sarah T.</span>
+            <span class="testimonial-card__role">VP at FinBank Asia</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-up">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "They understood our brand better than we expected. The activation was stunning."
+          </blockquote>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__name">Marcus L.</span>
+            <span class="testimonial-card__role">Marketing Director, Nike SEA</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-up">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "Our wedding was beyond anything we imagined. Worth every dollar."
+          </blockquote>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__name">Priya &amp; Rohan</span>
+            <span class="testimonial-card__role">Married Dec 2024</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 7 — CONTACT
+  ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="contact__bg-mesh"></div>
+    <div class="contact__noise"></div>
+
+    <div class="container contact__inner">
+      <div class="contact__header animate-up">
+        <div class="section-label section-label--light">Get in Touch</div>
+        <h2 class="section-headline contact__headline">Let's Build Something<br />Remarkable.</h2>
+        <p class="contact__subtext">Tell us about your event and we'll be in touch within 24 hours.</p>
+      </div>
+
+      <div class="contact__body">
+        <form class="contact-form animate-up" id="contactForm" novalidate>
+          <div class="form-row form-row--half">
+            <div class="form-group">
+              <label class="form-label" for="name">Full Name</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="eventType">Event Type</label>
+            <select class="form-input form-select" id="eventType" name="eventType" required>
+              <option value="" disabled selected>Select an event type</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="wedding">Wedding</option>
+              <option value="gala">Gala Dinner</option>
+              <option value="activation">Brand Activation</option>
+              <option value="private">Private Party</option>
+              <option value="virtual">Virtual / Hybrid</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Tell Us About Your Event</label>
+            <textarea class="form-input form-textarea" id="message" name="message" placeholder="Date, venue, guest count, vision..." rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--gold btn--full">Send Enquiry →</button>
+
+          <div class="form-success" id="formSuccess">
+            <span class="form-success__icon">✦</span>
+            <p>Thank you — we'll be in touch within 24 hours.</p>
+          </div>
+        </form>
+
+        <div class="contact__details animate-up">
+          <div class="contact-detail">
+            <span class="contact-detail__icon">✉</span>
+            <a href="mailto:hello@lumiereevents.sg" class="contact-detail__value">hello@lumiereevents.sg</a>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail__icon">◎</span>
+            <a href="tel:+6591234567" class="contact-detail__value">+65 9123 4567</a>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail__icon">⊙</span>
+            <span class="contact-detail__value">60 Anson Road, #12-01<br />Singapore 079914</span>
+          </div>
+
+          <div class="contact__social">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Pinterest">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.546 2.140-.828 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.138-1.868 3.138-4.566 0-2.387-1.715-4.057-4.163-4.057-2.836 0-4.5 2.126-4.5 4.323 0 .856.33 1.773.741 2.274a.3.3 0 0 1 .069.286c-.076.313-.244.995-.277 1.134-.044.183-.145.222-.334.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">LUMIÈRE</div>
+          <p class="footer__tagline">Crafting extraordinary moments since 2013.</p>
+        </div>
+
+        <div class="footer__nav-grid">
+          <div class="footer__col">
+            <h4 class="footer__col-title">Services</h4>
+            <ul class="footer__list">
+              <li><a href="#services" class="footer__link">Corporate Events</a></li>
+              <li><a href="#services" class="footer__link">Weddings</a></li>
+              <li><a href="#services" class="footer__link">Gala Dinners</a></li>
+              <li><a href="#services" class="footer__link">Brand Activations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Work</h4>
+            <ul class="footer__list">
+              <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+              <li><a href="#portfolio" class="footer__link">Case Studies</a></li>
+              <li><a href="#testimonials" class="footer__link">Testimonials</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Company</h4>
+            <ul class="footer__list">
+              <li><a href="#about" class="footer__link">About Us</a></li>
+              <li><a href="#process" class="footer__link">Our Process</a></li>
+              <li><a href="#contact" class="footer__link">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Connect</h4>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Instagram</a></li>
+              <li><a href="#" class="footer__link">LinkedIn</a></li>
+              <li><a href="#" class="footer__link">Pinterest</a></li>
+              <li><a href="mailto:hello@lumiereevents.sg" class="footer__link">Email Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2024 Lumière Events · Designed by Lumière Studio</p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+          <a href="#" class="footer__social-link" aria-label="LinkedIn">LI</a>
+          <a href="#" class="footer__social-link" aria-label="Pinterest">PT</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
