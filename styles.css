@@ -697,7 +697,9 @@ button {
 }
 
 .portfolio-tile--champagne {
-  background: linear-gradient(135deg, #2a1f16 0%, #3d2c1e 40%, #4a3525 70%, #1a1108 100%);
+  background: linear-gradient(135deg, rgba(42,31,22,0.72) 0%, rgba(61,44,30,0.6) 40%, rgba(74,53,37,0.65) 70%, rgba(26,17,8,0.82) 100%), url('raffles%20hotel.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .portfolio-tile--burgundy {
@@ -707,11 +709,15 @@ button {
 }
 
 .portfolio-tile--navy {
-  background: linear-gradient(135deg, #0a0d1f 0%, #101535 40%, #151a3d 70%, #060810 100%);
+  background: linear-gradient(135deg, rgba(10,13,31,0.72) 0%, rgba(16,21,53,0.6) 40%, rgba(21,26,61,0.65) 70%, rgba(6,8,16,0.82) 100%), url('nike%20event.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .portfolio-tile--forest {
-  background: linear-gradient(135deg, #0a1f0e 0%, #103520 40%, #154025 70%, #061008 100%);
+  background: linear-gradient(135deg, rgba(10,31,14,0.72) 0%, rgba(16,53,32,0.6) 40%, rgba(21,64,37,0.65) 70%, rgba(6,16,8,0.82) 100%), url('sentosa.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* Pattern overlays */
