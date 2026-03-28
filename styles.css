@@ -691,7 +691,9 @@ button {
 
 /* Gradient backgrounds */
 .portfolio-tile--teal {
-  background: linear-gradient(135deg, #0d2b35 0%, #0a4a5a 40%, #0d3d4a 70%, #061820 100%);
+  background: linear-gradient(135deg, rgba(13,43,53,0.72) 0%, rgba(10,74,90,0.6) 40%, rgba(13,61,74,0.65) 70%, rgba(6,24,32,0.82) 100%), url('samsung%20event.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .portfolio-tile--champagne {
@@ -699,7 +701,9 @@ button {
 }
 
 .portfolio-tile--burgundy {
-  background: linear-gradient(135deg, #1f0a0a 0%, #3d1010 40%, #4a1515 70%, #200808 100%);
+  background: linear-gradient(135deg, rgba(31,10,10,0.72) 0%, rgba(61,16,16,0.6) 40%, rgba(74,21,21,0.65) 70%, rgba(32,8,8,0.82) 100%), url('dinner%20event.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .portfolio-tile--navy {
